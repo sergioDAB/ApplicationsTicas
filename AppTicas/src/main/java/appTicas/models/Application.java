@@ -1,4 +1,4 @@
-package models;
+package appTicas.models;
 
 public class Application {
 
