@@ -1,11 +1,12 @@
-package appTicas.controllers;
+package aplicactions.ticas.appticas.controllers;
 
-
-import appTicas.models.ApplicationEntity;
-import appTicas.services.ApplicationService;
-import appTicas.utils.Response;
+import aplicactions.ticas.appticas.models.ApplicationEntity;
+import aplicactions.ticas.appticas.service.ApplicationService;
+import aplicactions.ticas.appticas.service.ApplicationServiceImplement;
+import aplicactions.ticas.appticas.utils.Response;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,13 +14,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
-import java.util.List;
+import java.lang.reflect.Type;
 
 @RestController
 public class ApplicationController {
 
     @Autowired
-    protected ApplicationService applicationService;
+    protected ApplicationServiceImplement applicationService;
 
     protected ObjectMapper objectMapper;
 
